@@ -25,16 +25,28 @@ export default function FormGenerateDataField() {
   }, [formData]);
 
   const handleCreateEmptyField = () => {
-    handleChange(
-      { target: { name: "fieldName", value: "" } },
-      uniqueId("field_")
-    );
+    const newId = uniqueId("field_");
+    const newItem = {
+      id: newId,
+      key: "",
+      value: "",
+    };
+    setFormData((prev) => {
+      const newFormData = clone(prev);
+      newFormData[newId] = newItem;
+      return newFormData;
+    });
   };
 
   return (
     <Box>
       {mappedFields.map((f) => (
-        <Field key={f.id} nameKey={f.fieldName} valueKey={f.value} />
+        <Field
+          key={f.id}
+          nameKey={f.fieldName}
+          valueKey={f.value}
+          onChange={(evt) => handleChange(evt, f.id)}
+        />
       ))}
       <Button onClick={handleCreateEmptyField}>Thêm</Button>
     </Box>

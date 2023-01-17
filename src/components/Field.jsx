@@ -12,7 +12,7 @@ export default function Field({ nameKey, valueKey, onChange }) {
     >
       <TextInput
         placeholder="name field"
-        name={"fieldName"}
+        name={"key"}
         value={nameKey}
         onChange={onChange}
         width={"100%"}
