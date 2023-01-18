@@ -31,7 +31,7 @@ export default function FormGenerateDataField() {
     const newId = uniqueId("field_");
     const newItem = {
       id: newId,
-      key: "",
+      key: newId,
       value: getFunc("faker.address.buildingNumber"),
       value_key: "faker.address.buildingNumber",
     };
