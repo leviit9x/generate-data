@@ -5,6 +5,11 @@ import { useGenerateData } from "../context";
 import { getFunc } from "../utils";
 import Field from "./Field";
 
+// useEffect(() => {
+//   const slide = document.querySelector(`.slide${activeSlide?.no}`);
+//   slide?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+// }, [activeSlide]);
+
 export default function FormGenerateDataField() {
   const [formData, setFormData] = useState({});
   const { state, dispatch } = useGenerateData();

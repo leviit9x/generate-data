@@ -3,7 +3,7 @@ import React from "react";
 
 export default function AppHeader() {
   return (
-    <Header>
+    <Header id="header" sx={{ width: "100%" }}>
       <Header.Item>
         <Header.Link href="/" fontSize={2}>
           <span>Generate Data</span>
@@ -12,14 +12,18 @@ export default function AppHeader() {
       <Header.Item full>
         <Label variant="success">NEW</Label>
       </Header.Item>
-      <Header.Item mr={0}>
+      <Header.Link
+        href="https://github.com/leviit9x/generate-data"
+        mr={0}
+        target={"_blank"}
+      >
         <Avatar
           src="https://github.com/octocat.png"
           size={20}
           square
           alt="@octocat"
         />
-      </Header.Item>
+      </Header.Link>
     </Header>
   );
 }
