@@ -1,6 +1,7 @@
-import { SplitPageLayout, Text } from "@primer/react";
+import { SplitPageLayout } from "@primer/react";
 import AppHeader from "./components/AppHeader.jsx";
 import FormGenerateDataField from "./components/FormGenerateDataField.jsx";
+import PreviewJsonData from "./components/PreviewJsonData.jsx";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <FormGenerateDataField />
       </SplitPageLayout.Pane>
       <SplitPageLayout.Content>
-        <Text>Preview data</Text>
+        <PreviewJsonData />
       </SplitPageLayout.Content>
     </SplitPageLayout>
   );
