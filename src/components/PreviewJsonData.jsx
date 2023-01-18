@@ -1,10 +1,11 @@
 import React from "react";
 import { GenerateDataCtx } from "../context";
+import ReactJson from "react-json-view";
 
 export default function PreviewJsonData() {
   return (
     <GenerateDataCtx.Consumer>
-      {({ state }) => <div>{JSON.stringify(state, null, 2)}</div>}
+      {({ state }) => <ReactJson src={state.data} />}
     </GenerateDataCtx.Consumer>
   );
 }

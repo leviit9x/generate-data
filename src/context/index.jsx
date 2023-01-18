@@ -17,7 +17,7 @@ function generateDataReducer(state, action) {
 }
 
 function GenerateDataProvider({ children }) {
-  const [state, dispatch] = useReducer(generateDataReducer, { data: null });
+  const [state, dispatch] = useReducer(generateDataReducer, { data: {} });
   // NOTE: you *might* need to memoize this value
   // Learn more in http://kcd.im/optimize-context
   const value = { state, dispatch };

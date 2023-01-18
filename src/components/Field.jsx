@@ -31,7 +31,7 @@ export default function Field({ nameKey, valueKey, onChange, isError, token }) {
       >
         <FormControl.Label>Type generate Value</FormControl.Label>
 
-        <Select name={"value"} onChange={onChange} value={valueKey}>
+        <Select name={"value_key"} onChange={onChange} value={valueKey}>
           {__fakeTypes__.map((type) => (
             <Select.Option value={type} key={type}>
               {type}
